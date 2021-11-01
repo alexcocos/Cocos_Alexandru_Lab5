@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cocos_Alexandru_Lab5", "Cocos_Alexandru_Lab5.csproj", "{09926ED0-B611-494F-B112-113B39A7AB18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoLotModel", "..\AutoLotModel\AutoLotModel.csproj", "{DB7398E6-F311-46D0-8C40-940029C60D6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09926ED0-B611-494F-B112-113B39A7AB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09926ED0-B611-494F-B112-113B39A7AB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09926ED0-B611-494F-B112-113B39A7AB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09926ED0-B611-494F-B112-113B39A7AB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7398E6-F311-46D0-8C40-940029C60D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7398E6-F311-46D0-8C40-940029C60D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7398E6-F311-46D0-8C40-940029C60D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7398E6-F311-46D0-8C40-940029C60D6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2351B3B-12AE-444C-A847-27486D388A59}
+	EndGlobalSection
+EndGlobal
