@@ -43,7 +43,6 @@ namespace Cocos_Alexandru_Lab5
             DataContext = this;
         }
 
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             customerVSource =
@@ -86,10 +85,13 @@ namespace Cocos_Alexandru_Lab5
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             action = ActionState.New;
+
         }
         private void btnEditO_Click(object sender, RoutedEventArgs e)
         {
             action = ActionState.Edit;
+            SetValidationBinding();
+            
         }
         private void btnDeleteO_Click(object sender, RoutedEventArgs e)
         {
@@ -169,6 +171,7 @@ namespace Cocos_Alexandru_Lab5
             }
         }
 
+        
         private void gbOperations_Click(object sender, RoutedEventArgs e)
         {
             Button SelectedButton = (Button)e.OriginalSource;
@@ -362,6 +365,37 @@ if (action == ActionState.Edit)
                 }
                 inventoryVSource.View.Refresh();
             }
+
+        }
+
+        private void SetValidationBinding()
+        {
+            Binding firstNameValidationBinding = new Binding();
+            firstNameValidationBinding.Source = customerVSource;
+            firstNameValidationBinding.Path = new PropertyPath("FirstName");
+            firstNameValidationBinding.NotifyOnValidationError = true;
+            firstNameValidationBinding.Mode = BindingMode.TwoWay;
+            firstNameValidationBinding.UpdateSourceTrigger =
+           UpdateSourceTrigger.PropertyChanged;
+            //string required
+            firstNameValidationBinding.ValidationRules.Add(new StringNotEmpty());
+            firstNameTextBox.SetBinding(TextBox.TextProperty,
+           firstNameValidationBinding);
+            Binding lastNameValidationBinding = new Binding();
+            lastNameValidationBinding.Source = customerVSource;
+            lastNameValidationBinding.Path = new PropertyPath("LastName");
+            lastNameValidationBinding.NotifyOnValidationError = true;
+            lastNameValidationBinding.Mode = BindingMode.TwoWay;
+            lastNameValidationBinding.UpdateSourceTrigger =
+           UpdateSourceTrigger.PropertyChanged;
+            //string min length validator
+            lastNameValidationBinding.ValidationRules.Add(new
+           StringMinLengthValidator());
+            lastNameTextBox.SetBinding(TextBox.TextProperty,
+           lastNameValidationBinding); //setare binding nou
+        }
+        private void customerDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }
